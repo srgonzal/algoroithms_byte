@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Algorithms for Bytes</title>
+</head>
+<body>
+	<script>
+	var newArr = [9,12, 6, 29];
+	function LinearSearch(num, arr){
+		for (var i = 0; i <= arr.length - 1; i++) {
+			if(arr[i] === num){
+				return i;
+			}
+		};
+		return -1;
+	};
+
+	console.log(LinearSearch(29, newArr));
+
+	function iSum(num){
+		var count = 0;
+		for (var i = 0; i <= num; i++) {
+			count += i;
+		}
+		return count;
+	};
+
+	console.log(iSum(9));
+
+	</script>
+</body>
+</html>
