@@ -27,6 +27,50 @@
 
 	console.log(iSum(9));
 
+	function iFactorial(num){
+		var sum = num;
+		for (var i = num - 1; i > 0; i--) {
+			sum = sum * i;
+		}
+		return sum;
+	};
+
+	console.log(iFactorial(5));
+
+	function rFactorial(num){
+		if(num === 1){
+			return 1;
+		}
+		else{
+		return num * rFactorial(num - 1) ;
+		}
+	};
+
+	console.log(rFactorial(5));
+
+	function iFibonacci(num){
+		var fibs = [0,1];
+		for (var i = 0; i < num; i++) {
+			fibs.push(fibs[0] + fibs[1]);
+			fibs.shift();
+		};
+		return fibs[0];
+	};
+
+	console.log(iFibonacci(8));
+
+	function rFibonacci(num){
+		if(num === 1 || num === 2){
+			return 1;
+		}
+		else{
+			return rFibonacci(num - 1) + rFibonacci(num - 2);
+		}
+	};
+
+	console.log(rFibonacci(5));
+			
+
 	</script>
 </body>
 </html>
