@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ALGORITHMSSS</title>
+</head>
+<body>
+
+	<script>
+
+		function UpTo(){
+			var sum = 0;
+			for (var i = 0; i <= 255; i++) {
+				sum += i;
+			};
+			return sum;
+		};
+
+		console.log(UpTo());
+
+		function Odd(){
+			var arr = [];
+			for (var i = 1; i <= 1000; i++) {
+				if (i % 2 !== 0) {
+					arr.push(i)
+				}
+		};
+		return arr;
+	};
+
+		console.log(Odd());
+
+		function PrintSum(){
+			var sum = 0;
+			for (var i = 0; i <= 5000; i++) {
+				sum += i;
+			}
+			return sum;
+		};
+
+		console.log(PrintSum());
+
+		var arrTest = ["yay", "woot", "work", "whomp"];
+
+		function PrintArr(arr){
+			for (var i = arr.length - 1; i >= 0; i--) {
+				console.log(arr[i]);
+			};
+		};
+
+	PrintArr(arrTest);
+
+	var arrNum = [3,9,15,-8,30];
+
+	function FindMax(arr){
+		var max = 0;
+		for (var i = arr.length - 1; i >= 0; i--) {
+			if(arr[i]> max){
+				max = arr[i];
+			}
+		};
+		return max;
+	};
+
+	console.log(FindMax(arrNum));
+
+	function ArrAverage(arr){
+		var sum = 0;
+		for (var i = arr.length - 1; i >= 0; i--) {
+			sum += arr[i];
+		};
+		var avg = sum/arr.length;
+		return avg;
+	};
+
+	console.log(ArrAverage(arrNum));
+
+	function OddArr(){
+		var newArr = [];
+		for (var i = 0; i <= 255; i++) {
+			if (i % 2 !== 0) {
+				newArr.push(i);
+			}
+		}
+		return newArr;
+	};
+
+	console.log(OddArr());
+
+
+	function GreaterThanY(arr){
+		var y = 5;
+		var count =  0;
+		for (var i = arr.length - 1; i >= 0; i--) {
+			if(arr[i] > y){
+				count ++;
+			}
+		};
+		return count;
+	};
+
+	console.log(GreaterThanY(arrNum));
+
+	function SquareValue(arr){
+		var squareArr = [];
+		for (var i = arr.length - 1; i >= 0; i--) {
+			squareArr.push(arr[i]*arr[i]);
+		};
+	  return squareArr;
+	};
+
+	console.log(SquareValue(arrNum));
+
+	function NoNegative(arr){
+		for (var i = arr.length - 1; i >= 0; i--) {
+			if(arr[i] < 0){
+				arr[i] = 0;
+			}
+		};
+		return arr;
+	};
+
+	console.log(NoNegative(arrNum));
+
+	function MinMaxAve(arr){
+		var min = 0;
+		var max = 0;
+		var sum = 0;
+		for (var i = arr.length - 1; i >= 0; i--) {
+			sum += arr[i];
+			if(arr[i]< min){
+				min = arr[i];
+			}
+			else if(arr[i] > max){
+				max = arr[i];
+			}
+		};
+		var avg = sum/arr.length;
+		console.log(min);
+		console.log(max);
+		console.log(avg);
+	};
+
+	MinMaxAve(arrNum);
+
+	function ShiftFront(arr){
+		if(arr[0]){
+			var temp = arr[0];
+	    };
+	    arr.splice(0,1);
+	    arr.push(temp);
+	    return arr;
+	};
+
+	console.log(ShiftFront(arrNum));
+
+	var NegArr = [-9, 5, -4, 6, 7];
+
+	function DojoNeg(arr){
+		for (var i = arr.length - 1; i >= 0; i--) {
+			if(arr[i] < 0){
+				arr[i] = "Dojo";
+			}
+		};
+		return arr;
+	};
+
+	console.log(DojoNeg(NegArr));
+
+	function RandomArr(){
+		var RandArr = [];
+		for (var i = 1; i <= 10; i++) {
+			RandArr.push(Math.floor((Math.random() * 100) + 1));
+		 };
+		 return RandArr;
+	};
+
+	console.log(RandomArr());
+
+
+	function SwappingVals(arr){
+		var temp = arr[0];
+		arr[0] = arr[arr.length - 1];
+		arr[arr.length - 1] = temp;
+		return arr;
+	};
+
+	console.log(SwappingVals(arrNum));
+
+	function ReverseArr(arr){
+		for (var i = 0; i < Math.floor(arr.length/2); i++) {
+			var temp = arr[i];
+			arr[i] = arr[arr.length - 1 - i];
+			arr[arr.length - 1 - i] = temp;
+		}
+		return arr;
+	};
+
+	console.log(ReverseArr(arrNum));
+
+	function InsertXtoY(arr){
+
+		arr.push(0);
+		for (var i = arr.length - 1; i > y; i--) {
+			arr[i] = arr[i-1];
+		};
+	   arr[y] = x;
+	   console.log(arr);
+	};
+
+	var NegativeArr = [8,-9, -5, 3, -9];
+
+	function RemoveNeg(arr){
+		var count = 0;
+		for (var i = 0; i <= arr.length - 1; i++) {
+			if (arr[i]<0) {
+				count++;
+			}
+			else{
+				arr[i - count] = arr[i];
+			}
+		};
+		while(count--){
+			arr.pop();
+		}
+		console.log(arr);
+	};
+
+	RemoveNeg(NegativeArr);
+
+
+	</script>
+
+</body>
+</html>

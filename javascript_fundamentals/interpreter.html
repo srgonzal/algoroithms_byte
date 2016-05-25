@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		// Problem 1
+		var first_variable //variable declaration floats to top
+		console.log(first_variable); //variable undefined
+		var first_variable = "Yipee I was first!"; //assign variable data
+		function firstFunc() { //creating function
+		  first_variable = "Not anymore!!!"; //reassigning 
+		  console.log(first_variable) //logs not anymore
+		}
+		console.log(first_variable); //logs yippee i was first
+		                           
+
+		// Problem 2
+		var food = "Chicken"; //creates and assigns variable food to chicken
+		function eat() { //create function eat
+		  var food //creates undefined variable food
+		  food = "half-chicken"; //reassign local variable food to half chicken
+		  console.log(food); //console logs gone
+		  var food = "gone";  //reassigns local variable food to gone     // NOTE: I'M TRYING TO TRICK YOU HERE!!!!
+		}
+		eat(); //console logs half chicken
+		console.log(food); //console logs half chicken
+                           
+
+		// Problem 3
+		var new_word = "NEW!";  //creates and assigns variable new word
+		function lastFunc() { //creates new function
+		  new_word = "old"; //reassigns variable new word
+		} //ends function
+		console.log(new_word); //console logs NEW
+	</script>
+
+</body>
+</html>

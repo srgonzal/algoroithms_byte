@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>doop doop</title>
+</head>
+<body>
+	<script>
+		var x = [3,5,'Dojo', 'rocks', 'Michael', 'Sensei'];
+		for (var i = x.length - 1; i >= 0; i--) {
+			console.log(x[i]);
+		};
+
+		x.push(100);
+
+		x.push(["doop"]);
+
+		console.log(x);
+
+		var sum = 0;
+
+		for (var i = 0; i <= 500; i++) {
+			sum+= i;
+		};
+
+		console.log(sum);
+
+		var min = 0;
+
+		var arr = [1, 5, 90, 25, -3, 0];
+
+		for (var i = arr.length - 1; i >= 0; i--) {
+			if(min > arr[i]){
+				min = arr[i];
+			}
+		};
+
+		console.log(min);
+
+		var avg = arr.length;
+
+		console.log(avg);
+
+		var sumTwo = 0;
+
+		for (var i = arr.length - 1; i >= 0; i--) {
+			sumTwo += arr[i];
+		};
+	
+
+		avg = sumTwo/avg;
+
+		console.log(avg);
+
+		function Sum(x,y){
+			var total = 0;
+			for (var i = x; i <= y; i++) {
+				total += i;
+			}
+			console.log(total);
+		};
+
+		Sum(3,8);
+
+		function findMin(arr){
+			for (var i = arr.length - 1; i >= 0; i--) {
+				if(min > arr[i]){
+					min = arr[i];
+			}
+		}
+	};
+
+		function findAvg(arr){
+			var sumTwo = 0;
+
+			for (var i = arr.length - 1; i >= 0; i--) {
+				sumTwo += arr[i];
+		}
+	
+
+		avg = sumTwo/arr.length;
+
+		console.log(avg);
+
+	};
+
+var person = {
+			name: 'sydney',
+			distance_travelled: 0,
+			say_name: alert(this.name),
+			say_something: function(string){
+				console.log(this.name + 'says, ' + string);
+			},
+			walk: function(){
+				alert(this.name + ' is walking');
+				this.distance_travelled +=2;
+			},
+			run: function(){
+				alert(this.name + ' is running');
+				this.distance_travelled +=10;	
+			},
+			crawl: function(){
+				alert(this.name + ' is crawling');
+				this.distance_travelled +=1;	
+			}
+		};
+
+		person.say_something('whoop');
+		person.walk();
+		person.run();
+		person.crawl();
+
+
+		function PersonConstructor(name){
+			var newPerson = person.new;
+			newPerson.name = name;
+			return newPerson;
+				}
+
+
+		function NinjaConstructor(name, cohort){
+			var ninja = {
+				ninja_name: name,
+				cohort: cohort,
+				belt_level: 1,
+				level_up: function(){
+					ninja.belt_level += 1;
+				}
+			}
+			return ninja;
+		};
+
+
+
+	</script>
+
+</body>
+</html>
