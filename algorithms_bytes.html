@@ -69,6 +69,110 @@
 	};
 
 	console.log(rFibonacci(5));
+
+	var arrBS = [0,2,6,9,12,15];
+
+
+	function rBS(key, arr, min, max){
+		if (max<min) {
+			return -1;
+		}
+		else{
+			var midpoint = Math.floor((max+min)/2);
+		}
+		if (arr[midpoint]< key) {
+			return rBS(key, arr, midpoint + 1, max);
+		}
+		else if(arr[midpoint]> key){
+			return rBS(key, arr, min, midpoint - 1);
+		}
+		else{
+			return midpoint;
+		};
+	}; 
+
+	console.log(rBS(9, arrBS, 0, arrBS.length)); 
+
+
+
+	function iBS(arr, num){
+		if(arr[Math.floor(arr.length/2)] < num){
+			for (var i = Math.floor(arr.length/2); i <= arr.length -1; i++) {
+				if(arr[i] === num){
+					return i;
+				}
+			};
+		}
+		else{
+			for (var i = 0; i < Math.floor(arr.length/2); i++) {
+				if(arr[i] === num){
+					return i;
+				}
+			};
+			
+		};
+		return false;
+	};
+
+	var randArr= [6,9,12,18,23];
+
+	console.log(iBS(randArr, 23));
+
+	var hooArray = [9, 2, 6, 654, 12];
+
+	var BubbleArr = [15, 4, 33, 9, 18];
+
+	function BubbleSort(arr){
+		for (var i = 0; i < arr.length -1; i++) {
+			for (var j = 0; j < arr.length -1 -i; j++) {
+				if(arr[j]>arr[j+1]){
+					var temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		};
+		return arr;
+	};
+
+	console.log(BubbleSort(BubbleArr));
+
+
+	function SelectionSort(arr){
+		for (var i = 0; i <= arr.length -1; i++) {
+			var min = i;
+			for (var j = i + 1; j <= arr.length -1; j++) {
+				if (arr[j] < arr[min]) {
+					min = j;
+				}
+			};
+			if (min !== i) {
+				var temp = arr[i];
+				arr[i] = arr[min];
+				arr[min] = temp; 
+			};
+		};
+		return arr;
+	};
+
+	console.log(SelectionSort(hooArray));
+
+	function InsertionSort(arr){
+	  var length = arr.length;
+	  
+	  for(var i = 0; i < length; i++) {
+	    var temp = arr[i]; 
+	    for(var j = i - 1; j >= 0 && (arr[j] > temp); j--) {
+	      arr[j+1] = arr[j];
+	    }
+	    arr[j+1] = temp;
+	  }
+	  return arr;
+};
+
+
+	var InsertionArr = [9, 80, 55, 3, 7];
+	console.log(InsertionSort(InsertionArr));
 			
 
 	</script>
